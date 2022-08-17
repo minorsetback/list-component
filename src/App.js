@@ -1,23 +1,23 @@
-import logo from './logo.svg';
 import './App.css';
+import ListComponent from './components/ListComponent';
 
 function App() {
+  const data = [
+    {
+      "header": "Заголовок 1",
+      "options": ["элемент списка 1", "элемент списка 2", "элемент списка 3"],
+      "text": "какой-то текст 1 текст какой-то 1 какой-то"
+    },
+    {
+      "header": "Заголовок 1",
+      "options": ["элемент списка 1", "элемент списка 2", "элемент списка 3"],
+      "text": "какой-то текст 1 текст какой-то 1 какой-то"
+    }
+  ]
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <ListComponent data={data} />
     </div>
   );
 }
